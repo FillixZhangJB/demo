@@ -1,5 +1,7 @@
 package com.zjb.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.zjb.mapper.DUserMapper;
 import com.zjb.model.DUser;
 import com.zjb.service.UserService;
@@ -59,5 +61,13 @@ public class UserServiceImpl implements UserService {
         return dUsers;
     }
 
+    public Object queryListByPage(DUser user, int pageNum, int size) {
+        PageHelper.startPage(pageNum, size);
+        Example example = new Example(DUser.class);
+        Example.Criteria criteria = example.createCriteria();
+        Page<DUser> page = new Page<DUser>();
+        List<DUser> dUsers = this.userMapper.selectByExample(example);
+        return dUsers;
+    }
 
 }

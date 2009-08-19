@@ -72,8 +72,8 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.41</version>
-            <!--<version>8.0.11</version>-->
+            <!--<version>5.1.41</version>-->
+            <version>8.0.11</version>
         </dependency>
         <!--oracle驱动包-->
         <dependency>
@@ -107,6 +107,7 @@
             <version>1.1.9</version>
         </dependency>
 
+        <!--mybatis自动生成model/mapper插件-->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>

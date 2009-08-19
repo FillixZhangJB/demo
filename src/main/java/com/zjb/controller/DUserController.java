@@ -58,4 +58,12 @@ public class DUserController {
         List<DUser> dUsers = this.userService.queryList(dUser);
         return LeeJSONResult.ok(dUsers);
     }
+
+    @GetMapping("queryListByPage")
+    public LeeJSONResult queryListByPage() {
+        DUser dUser = new DUser();
+        dUser.setUsername("ceshi");
+        Object page = this.userService.queryListByPage(dUser, 0, 1);
+        return LeeJSONResult.ok(page);
+    }
 }
