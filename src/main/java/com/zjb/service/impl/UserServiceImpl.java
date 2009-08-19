@@ -5,6 +5,8 @@ import com.zjb.model.DUser;
 import com.zjb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -18,6 +20,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     DUserMapper userMapper;
 
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void insert() {
         DUser user = new DUser();
@@ -25,6 +28,9 @@ public class UserServiceImpl implements UserService {
         user.setUsername("ceshi");
         user.setPassword("ceshi");
         this.userMapper.insert(user);
+        user.setUsername("ceshi2");
+        int i = 1 / 0;
+        this.userMapper.updateByPrimaryKeySelective(user);
     }
 
     @Override
