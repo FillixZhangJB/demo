@@ -13,7 +13,7 @@
         </plugin>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/mysqltest?useSSL=false"
+                        connectionURL="jdbc:mysql://localhost:3306/mybatistest?useSSL=false"
                         userId="root"
                         password="root">
         </jdbcConnection>
