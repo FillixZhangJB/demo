@@ -1,8 +1,7 @@
 package com.zjb.controller;
 
 import com.zjb.Entity.User;
-import com.zjb.util.LeeJSONResult;
-import org.springframework.stereotype.Controller;
+import com.zjb.utils.LeeJSONResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

@@ -1,4 +1,4 @@
-package com.zjb.util;
+package com.zjb.utils;
 
 import java.util.List;
 

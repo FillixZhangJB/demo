@@ -1,7 +1,7 @@
 package com.zjb.controller;
 
 import com.zjb.Entity.Resource;
-import com.zjb.util.LeeJSONResult;
+import com.zjb.utils.LeeJSONResult;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
