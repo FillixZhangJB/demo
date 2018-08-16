@@ -75,6 +75,12 @@
             <!--<version>5.1.41</version>-->
             <version>8.0.11</version>
         </dependency>
+        <!--oracle驱动包-->
+        <dependency>
+            <groupId>com.hynnet</groupId>
+            <artifactId>oracle-driver-ojdbc</artifactId>
+            <version>12.1.0.2</version>
+        </dependency>
 
         <!--mybatis-->
         <dependency>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="OracleContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.zjb.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@127.0.0.1:1521/orcl"
+                        userId="rsems"
+                        password="rsems">
+        </jdbcConnection>
+
+        <!-- 对于生成的model所在包 -->
+        <javaModelGenerator targetPackage="com.zjb.model" targetProject="src/main/java"/>
+
+		<!-- 生成的mapper.xml所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.zjb.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+		<table tableName="t_repairsheet"></table>
+		<table tableName="t_equipfailure"></table>
+    </context>
+</generatorConfiguration>
