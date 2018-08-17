@@ -17,4 +17,8 @@ public interface UserService {
     DUser queryById(DUser user);
 
     List<DUser> queryList(DUser user);
+
+    Object queryListByPage(DUser user, int pageNum, int size);
+
+
 }
