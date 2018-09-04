@@ -72,8 +72,8 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.41</version>
-            <!--<version>8.0.11</version>-->
+            <!--<version>5.1.41</version>-->
+            <version>8.0.11</version>
         </dependency>
         <!--oracle驱动包-->
         <dependency>
@@ -126,7 +126,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.1.23</version>
+            <version>1.2.28</version>
         </dependency>
 
     </dependencies>
